@@ -1,6 +1,7 @@
+const fs = require('fs');
 
 function isFileExists(file) {
-    return fsPromises.access(file, fs.constants.F_OK)
+    return fs.promises.access(file, fs.constants.F_OK)
       .then(() => true)
       .catch(() => false)
 }
